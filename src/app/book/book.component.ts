@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, OnDestroy } from '@angular/core';
 
 import '../types/Book';
 
@@ -8,7 +8,7 @@ import '../types/Book';
   templateUrl: './book.component.html',
   styleUrls: ['./book.component.css']
 })
-export class BookComponent implements OnInit {
+export class BookComponent implements OnInit, OnDestroy {
   //parent componentten data almak için ınput kullanılır//parent'tan gönderdiğimiz book parametresi bu inputtaki book değerine eşitlenir.
   @Input() book: Book = {} as Book;
 
@@ -21,6 +21,10 @@ export class BookComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  ngOnDestroy(): void {
+
   }
 
   addToCard() {
