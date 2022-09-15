@@ -14,7 +14,7 @@ export class BookComponent implements OnInit, OnDestroy {
 
   // @Output() bookEmitter = new EventEmitter<Book>();
 
-
+  isInCart: boolean = false;
 
   constructor(private cartService: CartService) { }
 
@@ -26,8 +26,15 @@ export class BookComponent implements OnInit, OnDestroy {
   }
 
   addToCart() {
+    this.isInCart = true;
     this.cartService.add(this.book);
     // this.bookEmitter.emit(this.book);
+  }
+
+  removeFromCart() {
+    this.isInCart = false;
+    this.cartService.remove(this.book);
+
   }
 
 }
