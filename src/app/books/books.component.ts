@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import '../types/Book';
+import { BooksService } from './books.service';
 
 @Component({
   selector: 'app-books',
@@ -7,31 +8,22 @@ import '../types/Book';
   styleUrls: ['./books.component.css']
 })
 export class BooksComponent implements OnInit {
+  constructor(private booksService: BooksService) { }
 
-  books: Book[] = [
-    {
-      name: 'Clean Code',
-      author: "Robert C Martin",
-      image: "https://images-na.ssl-images-amazon.com/images/I/41BsaF+yiSL._SX373_BO1,204,203,200_.jpg",
-      amount: 700,
-    },
-    {
-      name: "The Pragmatic Programmer",
-      author: "David Thomas",
-      image: "https://m.media-amazon.com/images/I/51W1sBPO7tL._AC_SY780_.jpg",
-      amount: 800
-    }
-  ]
+  books: Book[] = [];
 
   card: Book[] = [];
 
 
   isShowing: boolean = true;
 
-  constructor() { }
 
   ngOnInit(): void {
-    //constructordan sonra çağrılır
+    this.getBooks();
+  }
+
+  getBooks() {
+    this.books = this.booksService.getBooks();
   }
 
   //book componentten gönderdiğimiz addToCard methodunun içindeki this.bookEmitter.emit(this.book) e parametre olarak verdiğimiz book buraya gelir
@@ -41,5 +33,5 @@ export class BooksComponent implements OnInit {
 }
 
 
-//Component render olurken önce constructor sonro ngOnInit çağrılır
+// ngOnInit constructordan sonra çağrılır
 
