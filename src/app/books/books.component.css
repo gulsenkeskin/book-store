@@ -8,4 +8,5 @@ ul {
   text-overflow: ellipsis;
   width: 25%;
   text-align: center;
+  cursor: pointer; /* üzerine gelince el işareti çıkartır :D*/
 }
