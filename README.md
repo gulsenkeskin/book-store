@@ -1,5 +1,10 @@
 # BookStore
 
+https://bookstore-d03d8.web.app/ 
+
+## Warning: 
+src/app/firebase.config.ts don't forget to edit the file
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.2.
 
 ## Development server
