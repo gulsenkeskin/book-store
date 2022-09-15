@@ -3,7 +3,7 @@
 https://bookstore-d03d8.web.app/ 
 
 ## Warning: 
-src/app/firebase.config.ts don't forget to edit the file
+don't forget to edit the file: src/app/firebase.config.ts
 
 
 
