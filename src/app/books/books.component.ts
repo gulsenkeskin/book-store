@@ -33,6 +33,10 @@ export class BooksComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  //book componentten gönderdiğimiz addToCard methodunun içindeki this.bookEmitter.emit(this.book) e parametre olarak verdiğimiz book buraya gelir
+  addToCard(book: Book) {
+
+  }
 }
 
 
