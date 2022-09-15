@@ -11,6 +11,8 @@ export class LoginComponent implements OnInit {
 
   constructor() { }
 
+  isLoading: boolean = false;
+
   form: LoginForm = {
     email: '',
     password: ''
@@ -20,6 +22,7 @@ export class LoginComponent implements OnInit {
   }
 
   submit(): void {
+    this.isLoading = true;
 
     const auth = getAuth();
     signInWithEmailAndPassword(auth, this.form.email, this.form.password).then(
@@ -31,7 +34,7 @@ export class LoginComponent implements OnInit {
     ).catch((error) => {
       const errorCode = error.code;
       const errorMessage = error.message;
-    })
+    }).finally(() => (this.isLoading = false))
 
   }
 
