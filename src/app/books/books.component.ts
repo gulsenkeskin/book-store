@@ -31,6 +31,7 @@ export class BooksComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    //constructordan sonra çağrılır
   }
 
   //book componentten gönderdiğimiz addToCard methodunun içindeki this.bookEmitter.emit(this.book) e parametre olarak verdiğimiz book buraya gelir
@@ -39,4 +40,6 @@ export class BooksComponent implements OnInit {
   }
 }
 
+
+//Component render olurken önce constructor sonro ngOnInit çağrılır
 
