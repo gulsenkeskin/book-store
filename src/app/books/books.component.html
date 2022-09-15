@@ -5,6 +5,9 @@
 </button>
 
 <ul *ngIf="isShowing">
-  <img src="{{ src }}" alt="{{ name }}" width="100" />
-  <li>{{ name }} by {{ author }}</li>
+  <li *ngFor="let book of books">
+    <img src="{{ book.image }}" alt="{{ book.name }}" width="100" />
+    {{ book.name }} by
+    {{ book.author }}
+  </li>
 </ul>
