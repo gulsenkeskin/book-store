@@ -1,7 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter, OnDestroy } from '@angular/core';
-import { CartService } from 'src/app/services/cart.service';
-
-
+import { CartService } from 'src/app/cart/cart.service';
 
 @Component({
   selector: 'app-book',

@@ -6,9 +6,13 @@ import { Injectable } from '@angular/core';
 export class CartService {
   cart: Array<Book> = [];
 
-  constructor(private cartService: CartService) { }
+  constructor() { }
 
-  add(book: Book) {
+  add(book: Book): void {
     this.cart.push(book);
+  }
+
+  get(): Array<Book> {
+    return this.cart;
   }
 }
