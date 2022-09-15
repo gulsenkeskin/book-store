@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import '../types/Book';
 
 @Component({
   selector: 'app-books',
@@ -22,16 +23,10 @@ export class BooksComponent implements OnInit {
     }
   ]
 
-
-
+  card: Book[] = [];
 
 
   isShowing: boolean = true;
-
-
-
-
-
 
   constructor() { }
 
@@ -41,9 +36,3 @@ export class BooksComponent implements OnInit {
 }
 
 
-interface Book {
-  name: string
-  author: string
-  image: string
-  amount: number
-}
