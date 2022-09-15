@@ -1,7 +1,7 @@
 <div class="flex h-screen justify-center">
   <form
     (ngSubmit)="submit()"
-    action=""
+    #myForm="ngForm"
     class="p-4 rounded-lg border m-auto w-1/3"
   >
     <h1 class="text-center text-xl">Register</h1>
@@ -52,6 +52,7 @@
         class="p-2 rounded w-full border"
         placeholder="Password"
         [(ngModel)]="form.confirm_password"
+        name="confirm_password"
         #confirm_password="ngModel"
         required
       />
@@ -68,6 +69,7 @@
     <div class="my-5 w-full">
       <button
         type="submit"
+        [disabled]="myForm.form.invalid"
         class="p-2 w-full bg-purple-700 text-white hover:bg-purple-900 rounded"
       >
         Submit
