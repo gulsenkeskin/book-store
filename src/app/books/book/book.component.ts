@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter, OnDestroy } from '@angular/core';
+import { CartService } from 'src/app/services/cart.service';
 
 
 
@@ -13,11 +14,11 @@ export class BookComponent implements OnInit, OnDestroy {
 
   //parent componenete data göndermek için output kullanılır
 
-  @Output() bookEmitter = new EventEmitter<Book>();
+  // @Output() bookEmitter = new EventEmitter<Book>();
 
 
 
-  constructor() { }
+  constructor(private cartService: CartService) { }
 
   ngOnInit(): void {
   }
@@ -27,8 +28,8 @@ export class BookComponent implements OnInit, OnDestroy {
   }
 
   addToCart() {
-    this.bookEmitter.emit(this.book);
-
+    this.cartService.add(this.book);
+    // this.bookEmitter.emit(this.book);
   }
 
 }

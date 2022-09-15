@@ -11,12 +11,7 @@ export class BooksComponent implements OnInit {
   constructor(private booksService: BooksService) { }
 
   books: Book[] = [];
-
-  cart: Book[] = [];
-
-
   isShowing: boolean = true;
-
 
   ngOnInit(): void {
     this.getBooks();
@@ -27,9 +22,9 @@ export class BooksComponent implements OnInit {
   }
 
   //book componentten gönderdiğimiz addToCard methodunun içindeki this.bookEmitter.emit(this.book) e parametre olarak verdiğimiz book buraya gelir
-  addToCart(book: Book) {
+  // addToCart(book: Book) { }
 
-  }
+
 }
 
 
