@@ -1,12 +1,12 @@
 <h2>Programming Books List!</h2>
-<button (click)="isShowing = !isShowing">
+<!-- <button (click)="isShowing = !isShowing">
   <ng-container *ngIf="!isShowing">Show Book</ng-container>
   <ng-container *ngIf="isShowing">Hide Book</ng-container>
-</button>
+</button> -->
 
-<ul *ngIf="isShowing">
+<ul *ngIf="isShowing" class="flex flex-wrap justify-center">
   <ng-container *ngFor="let singleBook of books; let i = index">
-    <app-book [book]="singleBook"> </app-book>
+    <app-book class="w-1/2 p-5 text-center" [book]="singleBook"> </app-book>
     <!-- <app-book (bookEmitter)="addToCart($event)" [book]="singleBook"> </app-book> -->
   </ng-container>
 </ul>
