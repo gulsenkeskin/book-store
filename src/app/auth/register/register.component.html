@@ -18,7 +18,10 @@
         required
       />
     </div>
-    <div [hidden]="email.valid" class="p-2 bg-red-300 text-red-800 rounded">
+    <div
+      *ngIf="email.invalid && (email.dirty || email.touched)"
+      class="p-2 bg-red-300 text-red-800 rounded"
+    >
       Email field must be valid
     </div>
 
@@ -35,7 +38,10 @@
         required
       />
     </div>
-    <div [hidden]="password.valid" class="p-2 bg-red-300 text-red-800 rounded">
+    <div
+      *ngIf="password.invalid && (password.dirty || password.touched)"
+      class="p-2 bg-red-300 text-red-800 rounded"
+    >
       Password field must be valid
     </div>
     <div class="my-5 w-full">
@@ -51,7 +57,10 @@
       />
     </div>
     <div
-      [hidden]="confirm_password.valid"
+      *ngIf="
+        confirm_password.invalid &&
+        (confirm_password.dirty || confirm_password.touched)
+      "
       class="p-2 bg-red-300 text-red-800 rounded"
     >
       Confirm Password field must be valid
