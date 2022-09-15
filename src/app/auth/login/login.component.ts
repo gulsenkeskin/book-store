@@ -22,12 +22,9 @@ export class LoginComponent implements OnInit {
   }
 
   submit(): void {
-
-
     this.authService.login(this.form);
-
-
-
   }
-
+  isLoading() {
+    return this.authService.isLoading;
+  }
 }

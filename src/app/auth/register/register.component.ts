@@ -12,9 +12,6 @@ export class RegisterComponent implements OnInit {
 
   constructor(private authService: AuthService) { }
 
-  isLoading: boolean = false;
-
-
   form: LoginForm = {
     email: '',
     password: '',
@@ -24,16 +21,12 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  passwordMatched: boolean = true;
 
   submit(): void {
-
-    if (this.form.password !== this.form.confirm_password) {
-      this.passwordMatched = false;
-      return;
-    }
     this.authService.register(this.form);
-
+  }
+  isLoading() {
+    return this.authService.isLoading;
   }
 
 }

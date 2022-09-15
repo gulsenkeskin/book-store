@@ -9,6 +9,7 @@ export class AuthService {
   isAuthenticated: boolean = false;
   constructor() { }
 
+  passwordMatched: boolean = true;
 
   isLoading: boolean = false;
 
@@ -21,28 +22,34 @@ export class AuthService {
     const auth = getAuth();
     signInWithEmailAndPassword(auth, form.email, form.password).then(
       (userCredentials) => {
-        console.log(userCredentials);
-        const user = userCredentials.user;
-        alert("Login Successful");
+        this.isAuthenticated = true;
       }
     ).catch((error) => {
       const errorCode = error.code;
       const errorMessage = error.message;
+      this.isAuthenticated = false;
+
     }).finally(() => (this.isLoading = false))
   }
 
   register(form: LoginForm) {
+    if (form.password !== form.confirm_password) {
+      this.passwordMatched = false;
+      return;
+    }
     this.isLoading = true;
 
     const auth = getAuth();
     createUserWithEmailAndPassword(auth, form.email, form.password).then(
       (userCredentials) => {
-        console.log(userCredentials);
+        this.isAuthenticated = true;
         const user = userCredentials.user;
       }
     ).catch((error) => {
       const errorCode = error.code;
       const errorMessage = error.message;
+      this.isAuthenticated = false;
+
     }).finally(() => this.isLoading = false)
 
 
