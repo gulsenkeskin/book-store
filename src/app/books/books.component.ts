@@ -12,7 +12,7 @@ export class BooksComponent implements OnInit {
 
   books: Book[] = [];
 
-  card: Book[] = [];
+  cart: Book[] = [];
 
 
   isShowing: boolean = true;
@@ -27,7 +27,7 @@ export class BooksComponent implements OnInit {
   }
 
   //book componentten gönderdiğimiz addToCard methodunun içindeki this.bookEmitter.emit(this.book) e parametre olarak verdiğimiz book buraya gelir
-  addToCard(book: Book) {
+  addToCart(book: Book) {
 
   }
 }

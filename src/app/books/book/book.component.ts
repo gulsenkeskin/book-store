@@ -26,7 +26,7 @@ export class BookComponent implements OnInit, OnDestroy {
 
   }
 
-  addToCard() {
+  addToCart() {
     this.bookEmitter.emit(this.book);
 
   }
