@@ -7,8 +7,7 @@ https://bookstore-d03d8.web.app/
 ![image](https://user-images.githubusercontent.com/63197899/190851067-d630c257-131d-41a6-aa7c-2442f1b180f0.png)
 ![image](https://user-images.githubusercontent.com/63197899/190851071-c6a8c5b4-a34e-4397-9903-04662e63b711.png)
 
-<br>
-<br>
+
 <br>
 <br>
 
