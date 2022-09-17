@@ -2,8 +2,6 @@
 
 https://bookstore-d03d8.web.app/ 
 
-## Warning: 
-don't forget to edit the file: src/app/firebase.config.ts
 
 ![image](https://user-images.githubusercontent.com/63197899/190851066-b5ea8340-fc3f-4bc4-bbeb-50704d155b18.png)
 ![image](https://user-images.githubusercontent.com/63197899/190851067-d630c257-131d-41a6-aa7c-2442f1b180f0.png)
@@ -14,8 +12,11 @@ don't forget to edit the file: src/app/firebase.config.ts
 <br>
 <br>
 
-## Other
 
+## Warning: 
+don't forget to edit the file: src/app/firebase.config.ts
+
+##
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.2.
 
