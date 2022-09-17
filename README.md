@@ -5,8 +5,9 @@ https://bookstore-d03d8.web.app/
 ## Warning: 
 don't forget to edit the file: src/app/firebase.config.ts
 
-
-
+![image](https://user-images.githubusercontent.com/63197899/190851066-b5ea8340-fc3f-4bc4-bbeb-50704d155b18.png)
+![image](https://user-images.githubusercontent.com/63197899/190851067-d630c257-131d-41a6-aa7c-2442f1b180f0.png)
+![image](https://user-images.githubusercontent.com/63197899/190851071-c6a8c5b4-a34e-4397-9903-04662e63b711.png)
 
 <br>
 <br>
